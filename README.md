@@ -1,50 +1,28 @@
-# React + TypeScript + Vite
+# Calculadora de Propinas y Consumo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación web interactiva donde los usuarios pueden seleccionar productos de un menú, ver un resumen de los productos seleccionados y calcular la propina basada en un porcentaje elegido. Es ideal para simular el cálculo del costo total de una comida o consumo, incluyendo el valor de la propina.
 
-Currently, two official plugins are available:
+Puedes ver el demo en vivo aquí: [Calculadora de Propinas y Consumo](https://bereverte.github.io/calculadora-propinas/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Descripción
 
-## Expanding the ESLint configuration
+La aplicación permite a los usuarios:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Agregar productos al pedido**: El usuario puede elegir productos de un menú y agregarlos a su orden. Si selecciona un mismo producto varias veces, la cantidad se actualiza automáticamente.
+- **Visualizar el resumen del pedido**: Se muestra el contenido de la orden con la cantidad de cada producto y el costo total por ítem.
+- **Elegir el porcentaje de propina**: El usuario puede seleccionar entre tres porcentajes de propina: 10%, 20%, o 50%.
+- **Calcular el total**: La aplicación calcula el subtotal de la orden, el valor de la propina según el porcentaje seleccionado y el total a pagar (subtotal + propina).
+- **Finalizar la orden**: El usuario puede finalizar la orden, lo que limpia la selección de productos y reinicia la propina.
 
-- Configure the top-level `parserOptions` property like this:
+## Características
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Menú interactivo**: Permite a los usuarios seleccionar productos y ver el cálculo en tiempo real.
+- **Cálculo de propina**: Elige entre diferentes porcentajes de propina y calcula el monto exacto.
+- **Interfaz moderna**: Construida con React y TailwindCSS para una experiencia de usuario amigable y responsiva.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Tecnologías utilizadas
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **React**: Para la construcción de la interfaz de usuario.
+- **TypeScript**: Para tipado estático y mayor robustez en el desarrollo.
+- **TailwindCSS**: Para el diseño y estilo.
+- **Vite**: Como bundler para una rápida compilación y desarrollo.
